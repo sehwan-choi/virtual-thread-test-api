@@ -1,0 +1,19 @@
+server:
+  port: 8081
+spring.threads.virtual.enabled: true
+
+
+management:
+  endpoint:
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: info, health, metrics, prometheus
+  #        include: "*"
+  metrics:
+    tags:
+      application: api-monitor
